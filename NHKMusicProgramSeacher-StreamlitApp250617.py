@@ -185,7 +185,7 @@ def get_music_programs(start_date):
 # --- Streamlit UI ---
 st.set_page_config(page_title="NHK音楽番組サーチ", layout="wide")
 st.title("NHK音楽番組サーチ")
-st.write("NHKの音楽番組の放送用体を自動取得・整理します。\n\n- 検索開始日を選択してください（選択日：本日から7日先まで）。\n- 最大１週間分の音楽番組放送予定が表示されます（一部除外）。\n- 検索結果はテーブルで表示されます。\n")
+st.write("NHKの音楽番組の放送用体を自動取得・整理します。\n\n- 検索開始日を選択してください（期間：本日から7日先まで）。\n- 最大１週間分の音楽番組放送予定が表示されます（一部除外）。\n- NHK放送表APIから取得。\n- 検索結果はテーブルで表示されます。\n")
 
 today = datetime.date.today()
 start_date = st.date_input("検索開始日", value=today, min_value=today, max_value=today+datetime.timedelta(days=6), format="YYYY-MM-DD")
